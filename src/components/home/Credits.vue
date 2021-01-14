@@ -16,7 +16,7 @@ import Search from "../common/Search.vue";
 export default {
   name: "Credits",
   components: {
-    Search
+    Search,
   },
   data() {
     return {
@@ -24,10 +24,10 @@ export default {
         {
           title: "",
           value: "Arun Teltia",
-          url: "https://github.com/ArunTeltia"
-        }
-      ]
+          url: "https://github.com/ArunTeltia",
+        },
+      ],
     };
-  }
+  },
 };
 </script>

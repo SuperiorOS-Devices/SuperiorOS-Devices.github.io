@@ -5,7 +5,7 @@
     </a>
     <div class="menu" style="display: none">
       <h6 class="accent">COLOR ENGINE</h6>
-      <div class="line" style="margin-bottom: 12px;"></div>
+      <div class="line" style="margin-bottom: 12px"></div>
       <div>
         <span class="accent">BACKGROUND</span>
         <div id="backgrounds-render"></div>
@@ -20,6 +20,6 @@
 </template>
 <script>
 export default {
-  name: 'ThemeEngine',
+  name: "ThemeEngine",
 };
 </script>

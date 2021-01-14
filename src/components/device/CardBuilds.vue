@@ -67,7 +67,7 @@ import { generateDownloadURL } from "../../services/sourceforge";
 export default {
   name: "CardBuilds",
   components: {
-    Loading
+    Loading,
   },
   updated() {
     if (this.$route.params.filename) {
@@ -103,7 +103,7 @@ export default {
     download(file, codename) {
       M.toast({ html: "Download Started" });
       location.href = generateDownloadURL(file, codename);
-    }
+    },
   },
   computed: {
     deviceBuilds() {
@@ -111,7 +111,7 @@ export default {
     },
     device() {
       return this.$store.state.device;
-    }
-  }
+    },
+  },
 };
 </script>
