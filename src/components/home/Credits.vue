@@ -3,10 +3,8 @@
     <div class="credits">
       Website maintained by
       <a href="https://github.com/ArunTeltia">Arun Teltia</a>
-    </div>
-    <div class="credits">
-      Sponsored by
-      <a href="">XSLTEL OU</a>
+      and
+      <a href="https://github.com/Sweeto143">Sipun Ku Mahanta</a>
     </div>
   </div>
 </template>

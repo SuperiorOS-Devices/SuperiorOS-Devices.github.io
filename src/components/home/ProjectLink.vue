@@ -4,21 +4,21 @@
     <div class="buttons">
       <a
         target="_blank"
-        href="https://projectsakura.xyz"
+        href=""
         @click="hidebar"
         class="btn"
         >Home</a
       >
       <a
         target="_blank"
-        href="https://projectsakura.xyz/stats.html"
+        href=""
         @click="hidebar"
         class="btn"
         >Stats</a
       >
       <a
         target="_blank"
-        href="https://projectsakura.xyz/blog.html"
+        href=""
         @click="hidebar"
         class="btn"
         >Blog</a
