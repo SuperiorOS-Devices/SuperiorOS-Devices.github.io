@@ -59,7 +59,7 @@ const fetchBuilds = async codename => {
 const fetchChangelog = async (filename, codename) => {
   try {
     const res = await request(
-      `${baseURL}/OTA/11/changelog/changelog_${codename}.txt`,
+      `${baseURL}/changelogs/eleven/phoenix_${codename}.txt`,
       false
     );
 
@@ -71,7 +71,7 @@ const fetchChangelog = async (filename, codename) => {
 
 const fetchROMChangelog = async () => {
   const res = await request(
-    "https://raw.githubusercontent.com/ProjectSakura/OTA/11/changelog/rom_changelog.txt",
+    "https://raw.githubusercontent.com/SuperiorOS-Devices/changelogs/eleven/rom_changelog.txt",
     false
   );
   return res;
