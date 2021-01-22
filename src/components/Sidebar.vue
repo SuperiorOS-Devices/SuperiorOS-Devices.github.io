@@ -35,7 +35,7 @@
                     params: { codename: device.codename },
                   }"
                   class="pointer devilist"
-                  >{{ device.name }} ({{ device.codename }})</router-link
+                  >{{ device.device_name }} ({{ device.codename }})</router-link
                 >
               </li>
             </ul>

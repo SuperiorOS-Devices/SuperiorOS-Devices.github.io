@@ -32,8 +32,8 @@ const fetchDevices = async () => {
 
 const fetchBuilds = async codename => {
   try {
-    const res = await request(`${baseURL}/official_devices/tree/eleven/builds/${codename}.json`);
-
+    const res = await request(`${baseURL}/official_devices/eleven/builds/${codename}.json`);
+    console.log(res);
     const promises = res.response
       .map(async build => {
         const downloads = await fetchDownloadsCount(build.filename, codename);
