@@ -14,11 +14,11 @@
     <div v-if="search != ''" class="wrapper" @click="resetSearch">
       <router-link
         v-for="device in filteredList"
-        :key="device.name"
+        :key="device.device_name"
         :to="{ name: 'device', params: { codename: device.codename } }"
         class="search-link"
         :data-device="device.codename"
-        >{{ device.name }} ({{ device.codename }})</router-link
+        >{{ device.device_name }} ({{ device.codename }})</router-link
       >
     </div>
   </div>
@@ -57,18 +57,15 @@ export default {
   },
   computed: {
     filteredList() {
-      return this.$store.state.devices.flatMap((brands) =>
-        brands.devices.filter((d) => {
-          const resByCodename = d.codename
-            .toLowerCase()
-            .includes(this.search.toLowerCase());
-          const resByName = d.name
-            .toLowerCase()
-            .includes(this.search.toLowerCase());
-
-          return resByName || resByCodename;
-        })
-      );
+      return this.$store.state.devices.flatMap(brands => brands.devices.filter((d) => {
+        const resByCodename = d.codename
+          .toLowerCase()
+          .includes(this.search.toLowerCase());
+        const resByName = d.device_name
+          .toLowerCase()
+          .includes(this.search.toLowerCase());
+        return resByName || resByCodename;
+      }));
     },
   },
 };

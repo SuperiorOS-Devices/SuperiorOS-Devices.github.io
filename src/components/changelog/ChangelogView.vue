@@ -7,12 +7,12 @@
     </div>
 </template>
 <script>
-import VueMarkdown from 'vue-markdown';
+import VueMarkdown from "vue-markdown";
 
-import { fetchROMChangelog } from '../../services/github';
+import { fetchROMChangelog } from "../../services/github";
 
 export default {
-  name: 'ChangelogView',
+  name: "ChangelogView",
   components: {
     VueMarkdown,
   },

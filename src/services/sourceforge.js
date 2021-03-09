@@ -1,7 +1,7 @@
-import request from '../helpers/request';
-import { getToday, getTimestamp } from '../helpers/utils';
+import request from "../helpers/request";
+import { getToday, getTimestamp } from "../helpers/utils";
 
-const baseURL = 'https://sourceforge.net/projects/superioros';
+const baseURL = "https://sourceforge.net/projects/superioros";
 
 const fetchDownloadsCount = async (filename, codename) => {
   try {
