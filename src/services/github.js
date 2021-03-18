@@ -31,7 +31,7 @@ const fetchDevices = async () => {
 const fetchChangelog = async (filename, codename) => {
   try {
     const res = await request(
-      `${baseURL}/changelogs/eleven/phoenix_${codename}.txt`,
+      `${baseURL}/changelogs/eleven/xcalibur_${codename}.txt`,
       false,
     );
 
