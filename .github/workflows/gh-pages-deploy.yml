@@ -1,0 +1,23 @@
+name: Deploy to Github Pages
+on:
+  push:
+    branches:
+      - master
+        env:
+          GH_USERNAME: "${{ secrets.GH_USERNAME }}"
+          GH_MAIL: "${{ secrets.GH_MAIL }}"
+jobs:
+  gh-pages-deploy:
+    name: Deploying to Github Pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "12"
+      - name: Install packages
+        run: npm i
+      - name: Set Creds
+        run: git config user.name "${GH_USERNAME}" && git config user.email "${GH_MAIL}"
+      - name: Deploy
+        run: npm run deploy
