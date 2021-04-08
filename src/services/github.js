@@ -54,6 +54,7 @@ const fetchBuilds = async (codename) => {
 
         return {
           ...build,
+          type: Vanilla,
           size: humanSize(build.size),
           datetime: humanDate(build.datetime),
           md5: build.id,
@@ -62,6 +63,33 @@ const fetchBuilds = async (codename) => {
         };
       })
       .reverse();
+
+    try {
+      const res2 = await request(`${baseURL}/official_devices/eleven/builds/${codename}/gapps_build.json`);
+      console.log(res2);
+      const promises1 = res2.response
+        .map(async build => {
+          const downloads = await fetchDownloadsCount(build.filename, codename);
+          const changelog = await fetchChangelog(build.filename, codename);
+
+          return {
+            ...build,
+            type: Gapps,
+            size: humanSize(build.size),
+            datetime: humanDate(build.datetime),
+            md5: build.id,
+            downloads,
+            changelog
+          };
+        })
+        .reverse();
+      const newarr = promises.concat(promises1);
+
+      console.log(promises);
+      return await Promise.all(newarr);
+    } catch (e) {
+      console.log(e.message);
+    }
 
     return await Promise.all(promises);
   } catch (e) {

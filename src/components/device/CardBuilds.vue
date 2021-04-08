@@ -9,6 +9,7 @@
             @click="setBuild(build.filename)"
             class="buildcoll"
           >
+            <div>Android {{ build.type }}</div>
             <div class="collapsible-header white-text cardColor">
               <i class="material-icons">system_update</i>
               <span style="width: 100%">{{ build.filename }}</span>
