@@ -3,9 +3,10 @@ on:
   push:
     branches:
       - master
-        env:
-          GH_USERNAME: "${{ secrets.GH_USERNAME }}"
-          GH_MAIL: "${{ secrets.GH_MAIL }}"
+env:
+  GH_USERNAME: "${{ secrets.GH_USERNAME }}"
+  GH_MAIL: "${{ secrets.GH_MAIL }}"
+
 jobs:
   gh-pages-deploy:
     name: Deploying to Github Pages
