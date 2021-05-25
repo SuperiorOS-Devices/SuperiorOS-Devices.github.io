@@ -44,7 +44,7 @@ const fetchChangelog = async (filename, codename) => {
 const fetchBuilds = async (codename) => {
   try {
     const res = await request(
-      `${baseURL}/official_devices/eleven/builds/${codename}.json`,
+      `${baseURL}/official_devices/eleven/builds/${codename}/build.json`,
     );
     console.log(res);
     const promises = res.response
