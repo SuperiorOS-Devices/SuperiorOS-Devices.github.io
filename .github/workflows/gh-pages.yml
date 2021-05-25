@@ -9,10 +9,11 @@ jobs:
     - id: Build-Vue
       uses: xRealNeon/VuePagesAction@1.0.0
       with:
-        username: 'Sweeto143'
+        username: 'SuperiorOS-Devices'
         reponame: 'SuperiorOS-Devices.github.io'
         token: ${{ secrets.GH_TOKEN }}
         gitemail: ${{ secrets.GH_MAIL }}
         gitname: ${{ secrets.GH_USERNAME }}
-        gitmsg: 'pages: Update at $(TZ='Asia/Kolkata' date +"%b %e, %l:%M %p")'
+        gitmsg: Oo
         cname: 'downloads.superioros.org'
+        
