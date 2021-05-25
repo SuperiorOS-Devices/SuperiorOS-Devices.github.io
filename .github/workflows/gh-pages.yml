@@ -14,5 +14,5 @@ jobs:
         token: ${{ secrets.GH_TOKEN }}
         gitemail: ${{ secrets.GH_MAIL }}
         gitname: ${{ secrets.GH_USERNAME }}
-        gitmsg: pages: Update at $(TZ='Asia/Kolkata' date +"%b %e, %l:%M %p")
-        cname: downloads.superioros.org
+        gitmsg: 'pages: Update at $(TZ='Asia/Kolkata' date +"%b %e, %l:%M %p")'
+        cname: 'downloads.superioros.org'
