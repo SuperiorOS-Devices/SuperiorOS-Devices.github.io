@@ -1,0 +1,18 @@
+name: Build Vue
+on: [push]
+jobs:
+  build_vue:
+    runs-on: ubuntu-latest
+    name: Build Vue
+    steps:
+    - uses: actions/checkout@v2
+    - id: Build-Vue
+      uses: xRealNeon/VuePagesAction@1.0.0
+      with:
+        username: 'Sweeto143'
+        reponame: 'SuperiorOS-Devices.github.io'
+        token: ${{ secrets.GH_TOKEN }}
+        gitemail: ${{ secrets.GH_MAIL }}
+        gitname: ${{ secrets.GH_USERNAME }}
+        gitmsg: pages: Update at $(TZ='Asia/Kolkata' date +"%b %e, %l:%M %p")
+        cname: downloads.superioros.org
