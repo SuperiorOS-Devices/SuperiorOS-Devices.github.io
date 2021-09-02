@@ -7,7 +7,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - id: Build-Vue
-      uses: Sweeto143/VuePagesAction@2.0.0
+      uses: Darkstar085/VuePagesAction@2.0.0
       with:
         username: 'SuperiorOS-Devices'
         reponame: 'SuperiorOS-Devices.github.io'
